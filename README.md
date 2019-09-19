@@ -23,3 +23,5 @@ CREATE TABLE `t_user` (
 3./sso/doLogout，退出登录
 
 4./sso/login?service=aaa,调转登录页面，需提供service服务名参数
+
+5./sso/health,查看单点登录服务是否正常运行
