@@ -1,0 +1,311 @@
+/**  表示所有的元素的对齐方式以及和父类之间的间距都为0  */
+*{
+	margin: 0px auto;
+	padding: 0px;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+/*浏览器绝对定位  */
+.cotn_principal {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* 浏览器适应Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cfd8dc+0,607d8b+100,b0bec5+100 */
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cfd8dc+0,607d8b+100,b0bec5+100 */
+	background: #aac4bc; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #aac4bc 0%, #eca8a8 100%, #eed5a9 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #aac4bc 0%,#eca8a8 100%,#eed5a9 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #aac4bc 0%,#eca8a8 100%,#eed5a9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfd8dc', endColorstr='#b0bec5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.cont_centrar {
+  position: relative;
+  float: left;
+   width: 100%;
+      
+}
+/*left:50%; margin-left:-512px; 的作用主要是为了让这个div无论浏览器怎么拉伸都处于水平居中  */
+/*  position: relative;相对定位  */
+.cont_login {
+	position: relative;
+	width: 640px;
+	left: 50%;
+	margin-left: -320px; 
+}
+
+.cont_back_info {  
+	position: relative;
+	float: left;
+	width: 640px;
+	height: 280px;
+	overflow: hidden;
+	background-color: #fff;
+	margin-top: 100px;
+	box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
+}
+
+/*transition: all 0.5s;css动画过渡  */
+.cont_forms {
+	position: absolute;
+	overflow: hidden;
+	top:100px;
+	left: 0px;
+	width: 320px;
+	height: 280px;
+	background-color: #eee;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.cont_forms_active_login {
+	box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
+	height: 420px; 
+	width: 100%;
+	top:20px;
+	left: 0px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.cont_forms_active_sign_up {
+	box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
+	height: 420px;  
+	top:20px;
+	left:320px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.cont_img_back_grey {
+	position: absolute;
+	width: 950px;
+	top:-80px;
+	left: -116px;
+}
+/*
+	1.filter: grayscale(100%)变灰  
+	2.animation-name检索或设置对象所应用的动画名称，必须与规则@keyframes配合使用
+	3.animation-duration是一个计算机程序，检索或设置对象动画的持续时间。
+	4.animation-timing-function 规定动画的速度曲线。速度曲线定义动画从一套 CSS 样式变为另一套所用的时间。速度曲线用于使变化更为平滑。
+	5.linear：线性过渡。等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0)
+	6.animation-iteration-count 属性定义动画的播放次数。
+	7.infinite规定动画应该无限次播放。
+	8.animation-direction，是用来检索或设置对象动画在循环中是否反向运动的方法
+	9.alternate正常与反向交替
+*/
+.cont_img_back_grey > img {
+	width: 100%;
+	-webkit-filter: grayscale(100%);     filter: grayscale(100%);
+	opacity: 0.2;
+	animation-name: animar_fondo;
+	animation-duration: 20s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.cont_img_back_ {
+	position: absolute;
+	width: 950px;
+	top:-80px;
+	left: -116px;
+}
+
+.cont_img_back_ > img {
+	width: 100%;
+	opacity: 0.3;
+	animation-name: animar_fondo;
+	animation-duration: 20s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.cont_forms_active_login > .cont_img_back_ {
+	top:0px;  
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.cont_forms_active_sign_up > .cont_img_back_ {
+	top:0px;  
+	left: -435px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+ 
+ /* ----------------------------------
+第二层
+------------------------------------
+ */
+.cont_info_log_sign_up {
+  position: absolute;
+  width: 640px;
+  height: 280px;
+  top: 100px;
+  z-index: 1;
+} 
+
+.col_md_login {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.col_md_login > h2 {
+  font-weight: 400;
+margin-top: 70px;
+    color: #757575;
+}
+
+.col_md_login > p {
+	font-weight: 400;
+	margin-top: 15px;
+	width: 80%;
+	color: #37474F;
+}
+
+.btn_login { 
+background-color: #FF9800;
+  border: none;
+  padding: 10px;
+width: 200px;
+border-radius:3px;
+box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
+  color: #fff;
+margin-top: 10px;
+cursor: pointer;
+}
+
+
+
+.cont_ba_opcitiy > h2 {
+  font-weight: 400;
+  color: #fff;
+}
+
+.cont_ba_opcitiy > p {
+ font-weight: 400;
+margin-top: 15px;
+ color: #fff;
+}
+/* ----------------------------------
+background text    
+------------------------------------
+ */
+.cont_ba_opcitiy {
+  position: relative;
+  background-color: rgba(187, 168, 170, 0.79);
+  width: 80%;
+  border-radius:3px ;
+margin-top: 60px;
+padding: 15px 0px;
+}
+
+
+
+@-webkit-keyframes animar_fondo {
+  from { -webkit-transform: scale(1) translate(0px);
+-moz-transform: scale(1) translate(0px);
+-ms-transform: scale(1) translate(0px);
+-o-transform: scale(1) translate(0px);
+transform: scale(1) translate(0px); }
+  to { -webkit-transform: scale(1.5) translate(50px);
+-moz-transform: scale(1.5) translate(50px);
+-ms-transform: scale(1.5) translate(50px);
+-o-transform: scale(1.5) translate(50px);
+transform: scale(1.5) translate(50px); }
+}
+@-o-keyframes identifier {
+  from { -webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1); }
+  to { -webkit-transform: scale(1.5);
+-moz-transform: scale(1.5);
+-ms-transform: scale(1.5);
+-o-transform: scale(1.5);
+transform: scale(1.5); }
+
+}
+@-moz-keyframes identifier {
+  from { -webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1); }
+  to { -webkit-transform: scale(1.5);
+-moz-transform: scale(1.5);
+-ms-transform: scale(1.5);
+-o-transform: scale(1.5);
+transform: scale(1.5); }
+
+}
+@keyframes identifier {
+  from { -webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+transform: scale(1); }
+  to { -webkit-transform: scale(1.5);
+-moz-transform: scale(1.5);
+-ms-transform: scale(1.5);
+-o-transform: scale(1.5);
+transform: scale(1.5); }
+}
+.cont_form_login {
+  position: absolute;
+  opacity: 0;
+display: none;
+  width: 640px;
+  -webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-ms-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;
+}
+
+.cont_forms_active_login {
+z-index: 2;  
+}
+.cont_forms_active_login  >.cont_form_login {
+}
+
+.cont_form_login > input {
+  padding: 15px 5px;
+margin-left: 10px;
+margin-top: 20px;
+  width: 520px;
+border: none;
+text-align: left;
+  color: #757575;
+}
+
+.cont_form_login > h2 {
+margin-top: 110px; 
+font-weight: 400;
+  color: #757575;
+}
+.cont_form_login > a  {
+  color: #757575;
+    position: relative;
+    float: left;
+    margin: 10px;
+margin-left: 30px;
+}

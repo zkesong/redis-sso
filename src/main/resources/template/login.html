@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>单点登录系统</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+
+<div class="cotn_principal">
+  <div class="cont_centrar">
+    <div class="cont_login">
+    <!--***************-->
+	<div class="cont_info_log_sign_up">
+        <div class="col_md_login">
+          <div class="cont_ba_opcitiy">
+            <h3>欢迎</h3>
+            <button class="btn_login" onClick="cambiar_login()">登录</button>
+          </div>
+        </div>
+     </div> 
+    <!--***************-->
+     <!--***-->
+    <div class="cont_back_info">
+        <div class="cont_img_back_grey"> <img src="images/po.jpg" alt="" /> </div>
+     </div>
+      <!--***--> 
+      <div class="cont_forms" >
+        <div class="cont_img_back_"> <img src="images/po.jpg" alt="" /> </div>   
+        <div class="cont_form_login"> <a href="#" onClick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+          <h2>登录</h2>
+          <input id="usrname" type="text" placeholder="姓名" />
+          <input id="passwd" type="password" placeholder="密码" />
+          <button class="btn_login" onClick="login()">登录</button>
+        </div>
+      </div>
+      <!--***************-->
+
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/index.js"></script>
+<div style="text-align:center;">
+
+</div>
+</body>
+</html>
